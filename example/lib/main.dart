@@ -1,6 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shake_animation_widget/shake_animation_widget.dart';
+import 'package:dev_colorized_log/dev_colorized_log.dart';
 
 /// 创建人： Created by zhaolong
 /// 创建时间：Created by  on 2020/7/21.
@@ -11,6 +11,7 @@ import 'package:shake_animation_widget/shake_animation_widget.dart';
 ///
 ///
 main() {
+  Dev.enable = true;
   runApp(MaterialApp(
     home: Exam222HomePage(),
   ));
@@ -103,7 +104,7 @@ class _Exam220HomePageState extends State<Exam222HomePage> {
 
       ///子菜单按钮的点击事件回调
       clickCallback: (int index) {
-        print("点击了按钮$index");
+        Dev.log("点击了按钮$index");
       },
     );
   }
@@ -174,7 +175,7 @@ class _Exam220HomePageState extends State<Exam222HomePage> {
       height: 40,
       buttonText: '动画样式按钮',
       clickCallback: () {
-        print("点击事件回调");
+        Dev.log("点击事件回调");
       },
     );
   }
@@ -204,7 +205,7 @@ class _Exam220HomePageState extends State<Exam222HomePage> {
       //文字颜色
       //点击回调
       clickCallback: () async {
-        print("点击事件回调");
+        Dev.log("点击事件回调");
         //模拟耗时操作
         await Future.delayed(Duration(milliseconds: 4000));
         //返回false 会一直在转圈圈
@@ -246,7 +247,7 @@ class _ExampleState extends State<Example309> {
           iconList: iconList,
           //对应菜单项点击事件回调
           clickCallBack: (int index) {
-            print("点击了 $index");
+            Dev.log("点击了 $index");
           },
         ),
       ),

@@ -1,5 +1,7 @@
-import 'package:flutter/gestures.dart';
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
+import 'package:dev_colorized_log/dev_colorized_log.dart';
 
 //静态路由配置///代码清单2-27-1 可托动的悬浮按钮
 ///代码路径 lib/code2/draggable_floating_action_button.dart
@@ -55,7 +57,7 @@ class _DraggableFloatingActionButtonState
             parentSize.width - size.width, parentSize.height - size.height);
       });
     } catch (e) {
-      print('catch: $e');
+      Dev.log('catch: $e');
     }
   }
   ///代码清单2-27-3 计算按钮位置
@@ -94,7 +96,7 @@ class _DraggableFloatingActionButtonState
           });
         },
         onPointerUp: (PointerUpEvent pointerUpEvent) {
-          print('onPointerUp');
+          Dev.log('onPointerUp');
           if (_isDragging) {
             setState(() {
               _isDragging = false;

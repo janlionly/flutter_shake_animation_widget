@@ -1,5 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:dev_colorized_log/dev_colorized_log.dart';
 
 /// 创建人： Created by zhaolong
 /// 创建时间：Created by  on 2020/11/10.
@@ -72,17 +72,17 @@ class _MenuState extends State<RoteFlowButtonMenu>
             setState(() {
               ///从0到1
               _rad = animation.value;
-              print("$_rad ");
+              Dev.log("$_rad ");
             });
           })
 
           ///设置状态监听
           ..addStatusListener((status) {
             if (status == AnimationStatus.completed) {
-              print("正向执行完毕 ");
+              Dev.log("正向执行完毕 ");
               _closed = !_closed;
             } else if (status == AnimationStatus.dismissed) {
-              print("反向执行完毕 ");
+              Dev.log("反向执行完毕 ");
               _closed = !_closed;
             }
           });

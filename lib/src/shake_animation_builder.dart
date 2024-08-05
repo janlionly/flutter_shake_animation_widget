@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shake_animation_widget/src/shake_animation_type.dart';
+import 'package:dev_colorized_log/dev_colorized_log.dart';
 
 /**
  * 创建人： Created by zhaolong
@@ -81,7 +82,7 @@ class ShakeAnimationBuilder extends StatelessWidget {
         dy = animation.value * 15;
       }
 
-      print("dx $dx dy $dy");
+      Dev.log("dx $dx dy $dy", isLog: false);
 
       ///在XOY平面的平移
       return Matrix4.translationValues(dx, dy, 0);
